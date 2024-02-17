@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Silicon_MVC\\SiliconMVC\\SiliconMVC.csproj": {}
+    "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\SiliconMVC.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Silicon_MVC\\SiliconMVC\\SiliconMVC.csproj": {
+    "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\SiliconMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Silicon_MVC\\SiliconMVC\\SiliconMVC.csproj",
+        "projectUniqueName": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\SiliconMVC.csproj",
         "projectName": "SiliconMVC",
-        "projectPath": "D:\\Projects\\Silicon_MVC\\SiliconMVC\\SiliconMVC.csproj",
+        "projectPath": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\SiliconMVC.csproj",
         "packagesPath": "C:\\Users\\Hwila\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Silicon_MVC\\SiliconMVC\\obj\\",
+        "outputPath": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

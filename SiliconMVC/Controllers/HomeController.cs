@@ -7,6 +7,8 @@ namespace SiliconMVC.Controllers
         // GET: /User/
         public IActionResult Index()
         {
+            ViewData["Title"] = "Home Page";
+
             return View();
             
         }

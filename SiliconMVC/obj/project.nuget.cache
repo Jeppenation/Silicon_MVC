@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U3CrMWuKJwlbUlZewFr/LXGiFJwG4qIFe0X62l4LM7e62DZkDNiKcZAYFG+xR3AV3WPFy3d4V85meS1rn8tgVw==",
+  "dgSpecHash": "CZEG0JME2g0FoUwyf4Xmy3ucYnd4e7on+vH2CbMH1k248d5SQriiSbQyYUcRSJu64Ux2UvEzSXRrnXiw3lZzZA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Silicon_MVC\\SiliconMVC\\SiliconMVC.csproj",
+  "projectFilePath": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\SiliconMVC.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
