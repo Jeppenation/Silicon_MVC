@@ -1,2 +1,88 @@
-﻿
+﻿@* <!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/site.min.css">
+    <title>Silicon</title>
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <a id="logo" href="home.html"><img src="/images/Silicon Logotype - Light Mode.svg" alt="Silicon"></a>
+
+            <div id="menu">
+                <nav>
+                    <a class="menu-link" href="#showcase">Overview</a>
+                    <a class="menu-link" href="#features">Features</a>
+                    <a class="menu-link" href="contact.html">Contact</a>
+                </nav>
+            </div>
+
+            <div class="btn-switch">
+                <label>Light</label>
+                <label class="switch">
+                    <input type="checkbox" id="switch-mode" />
+                    <span class="slider round"></span>
+                </label>
+                <label>Dark</label>
+            </div>
+
+            <div class="account-buttons">
+                <a class="btn-gray" href="#"><i class="fa-regular fa-right-to-bracket"></i></a>
+                <a class="btn-theme" href="#"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+@*         <section class="showcase">
+            <img class="background-image" src="./images/Showcase-image.svg" alt="">
+            <div class="container">
+                <div class="content">
+                    <h1>Task Management Assistant You Gonna Love</h1>
+                    <p>We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.</p>
+                    <a href="#" class="btn-theme-s">Get started for free</a>
+                    <h6>Largest companies use our tool to work efficiently</h6>
+
+                    <div class="brands">
+                        <img src="./images/logo1.svg" alt="Company 1">
+                        <img src="./images/logo2.svg" alt="Company 2">
+                        <img src="./images/logo3.svg" alt="Company 3">
+                        <img src="./images/logo4.svg" alt="Company 4">
+                    </div>
+                </div>
+            </div>
+        </section> *@
+
+
+
+
+@*     </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p>&copy 2024 Silicon. All rights reserved. Pulvinar urna condimentum amet tempor, ornare integer. Lorem odio justo malesuada suspendisse viverra aliquet quisque turpis non. Feugiat in odio non nunc ornare consectetur. </p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
+
+  *@
+
+@await Html.PartialAsync("~/Views/Shared/Sections/_ShowcasePartial.cshtml");
+@await Html.PartialAsync("~/Views/Shared/Sections/_FeaturesPartial.cshtml");
