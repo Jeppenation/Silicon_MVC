@@ -11,7 +11,7 @@ namespace SiliconMVC.Model.Views
             ShowcaseImage = new() { ImageUrl = "images/Showcase-image.svg", AltText = "Task Management Assistant" },
             Title = "Task Managment Assistant You Gonna Love",
             Text = "We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.",
-            Link = new() { ControllerName = "download", ActionName = "index", Text = "Get started for free" },
+            Link = new() { ControllerName = "downloads", ActionName = "index", Text = "Get started for free" },
             BrandsText = "Largest companies use our tool to work efficiently",
             Brands =
                     [
