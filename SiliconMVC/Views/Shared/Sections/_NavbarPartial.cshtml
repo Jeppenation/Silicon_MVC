@@ -1,12 +1,12 @@
 ﻿<header>
     <div class="container">
-        <a id="logo" href="home.html"><img src="/images/Silicon Logotype - Light Mode.svg" alt="Silicon"></a>
+        <a id="logo" asp-controller="Contact" asp-action="Index"><img src="/images/Silicon Logotype - Light Mode.svg" alt="Silicon"></a>
 
         <div id="menu">
             <nav>
                 <a class="menu-link" href="#overview">Overview</a>
                 <a class="menu-link" href="#features">Features</a>
-                <a class="menu-link" href="contact.html">Contact</a>
+                <a class="menu-link" asp-controller="Contact" asp-action="Index">Contact</a>
             </nav>
         </div>
 
@@ -20,8 +20,8 @@
         </div>
 
         <div class="account-buttons">
-            <a class="btn-gray" href="#"><i class="fa-regular fa-right-to-bracket"></i></a>
-            <a class="btn-theme" href="#"><i class="fa-regular fa-user"></i></a>
+            <a class="btn-gray" asp-controller="Account" asp-action="SignIn" ><i class="fa-regular fa-right-to-bracket"></i></a>
+            <a class="btn-theme" asp-controller="Account" asp-action="SignUp"><i class="fa-regular fa-user"></i></a>
         </div>
     </div>
 
