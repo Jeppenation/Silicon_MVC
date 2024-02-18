@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9GZWF0dXJlc1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Shared/Sections/_FooterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Shared/Sections/_NavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9OYXZiYXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Shared/Sections/_ShowcasePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNlY3Rpb25zXF9TaG93Y2FzZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
