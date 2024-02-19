@@ -187,11 +187,11 @@ a {
   color: #565973;
   font-family: "Manrope", sans-serif;
   color: #6366F1;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.25s ease-in-out;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .menu-link {
@@ -208,7 +208,7 @@ a:hover {
 .menu-link:hover, .menu-link:active, .menu-link:focus,
 .menu-link .active {
   color: #6366F1;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .btn-theme {
@@ -220,6 +220,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
   background: #6366F1;
   color: #FFFFFF;
   border: none;
@@ -239,6 +240,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
   box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
   background: #6366F1;
   color: #FFFFFF;
@@ -261,6 +263,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
   background: #EFF2FC;
   color: #33354D;
   border: none;
@@ -347,11 +350,39 @@ a:hover {
   height: 44px;
   background-color: #EFF2FC;
   color: #33354D;
+  text-decoration: none;
+  font-size: 1.8rem;
 }
 .btn-social:hover {
   text-decoration: none;
   background: #565973;
   color: #FFFFFF;
+}
+
+#btn-mobilemenu {
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  background: transparent;
+  color: #33354D;
+  border: none;
+  display: flex;
+  font-size: 1.7rem;
+}
+#btn-mobilemenu:hover {
+  text-decoration: none;
+  color: #33354D;
+}
+@media (min-width: 1200px) {
+  #btn-mobilemenu {
+    display: none;
+  }
 }
 
 header {
@@ -364,7 +395,7 @@ header .container {
   grid-template-areas: "logo mobile";
   gap: 40px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header .container {
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "logo menu switch buttons";
@@ -377,7 +408,7 @@ header .container #menu {
   grid-area: menu;
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header .container #menu {
     display: block;
   }
@@ -390,7 +421,7 @@ header .container .btn-switch {
   grid-area: switch;
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header .container .btn-switch {
     display: block;
   }
@@ -400,7 +431,7 @@ header .container .account-buttons {
   display: none;
   gap: 15px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header .container .account-buttons {
     display: flex;
   }
@@ -409,8 +440,17 @@ header .container .btn-mobile {
   grid-area: mobile;
   display: block;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header .container .btn-mobile {
+    display: none;
+  }
+}
+header .container #btn-mobile {
+  grid-area: mobile;
+  display: block;
+}
+@media (min-width: 1200px) {
+  header .container #btn-mobile {
     display: none;
   }
 }
