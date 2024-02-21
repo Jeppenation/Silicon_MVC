@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\components\\_buttons.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\components\\_forms.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\components\\_forms.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\components\\_links.scss",
       "PackagePath": "staticwebassets\\css\\scss\\components\\_links.scss"
     },
