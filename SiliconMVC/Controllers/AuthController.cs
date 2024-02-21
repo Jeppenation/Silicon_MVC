@@ -2,14 +2,8 @@
 
 namespace SiliconMVC.Controllers
 {
-    public class AccountController : Controller
+    public class AuthController : Controller
     {
-        public IActionResult Index()
-        {
-            ViewData["Title"] = "Account";
-            return View();
-        }
-
         public IActionResult SignIn()
         {
             ViewData["Title"] = "Sign In";
@@ -22,8 +16,8 @@ namespace SiliconMVC.Controllers
             return View();
         }
 
-        public new IActionResult SignOut() 
-        { 
+        public new IActionResult SignOut()
+        {
             return RedirectToAction("Index", "Home");
         }
     }

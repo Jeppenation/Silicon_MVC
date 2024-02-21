@@ -18,16 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projects\Silicon_MVC_git\SiliconMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Account/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Auth/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Account/SignIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Account/SignUp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+[D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Auth/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/Silicon_MVC_git/SiliconMVC/Views/Contact/Index.cshtml]
