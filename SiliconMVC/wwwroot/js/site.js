@@ -18,5 +18,8 @@ const checkScreenSize = () => {
     }
 };
 
+
+
+
 window.addEventListener('resize', checkScreenSize);
 checkScreenSize();
