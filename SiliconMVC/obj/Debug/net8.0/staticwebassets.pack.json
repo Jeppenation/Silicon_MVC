@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_signup.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_singin.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_singin.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
