@@ -6,10 +6,29 @@ namespace SiliconMVC.Controllers;
 public class AuthController : Controller
 {
     [Route("/signin")]
+    [HttpGet]
     public IActionResult SignIn()
     {
-        ViewData["Title"] = "Sign In";
-        return View();
+        var viewModel = new SignInViewModel();
+        return View(viewModel);
+    }
+
+    [Route("/signin")]
+    [HttpPost]
+    public IActionResult SignIn(SignInViewModel viewModel)
+    {
+
+        if (!ModelState.IsValid)
+        {
+            return View(viewModel);
+        }
+
+        //var result = _authService.SignIn(viewModel.Form);
+        //if (!result)
+        viewModel.ErrorMessage = "Invalid username or password.";
+        return View(viewModel);
+
+        return RedirectToAction("Account", "Index");
     }
 
     [Route("/signup")]
