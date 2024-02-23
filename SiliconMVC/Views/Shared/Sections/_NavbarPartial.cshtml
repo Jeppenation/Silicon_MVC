@@ -7,9 +7,9 @@
 
         <div id="menu">
             <nav>
-                <a class="menu-link" href="#overview">Overview</a>
-                <a class="menu-link" href="#features">Features</a>
-                <a class="menu-link" asp-controller="Contact" asp-action="Index">Contact</a>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="contact">Contact</a>
             </nav>
         </div>
 
@@ -23,8 +23,8 @@
         </div>
 
         <div class="account-buttons">
-            <a class="btn-gray" asp-controller="Account" asp-action="SignIn" ><i class="fa-regular fa-right-to-bracket"></i></a>
-            <a class="btn-theme" asp-controller="Account" asp-action="SignUp"><i class="fa-regular fa-user"></i></a>
+            <a class="btn-gray" asp-controller="Auth" asp-action="SignIn" ><i class="fa-regular fa-right-to-bracket"></i></a>
+            <a class="btn-theme" asp-controller="Auth" asp-action="SignUp"><i class="fa-regular fa-user"></i></a>
         </div>
 
         <button id="btn-mobilemenu">
