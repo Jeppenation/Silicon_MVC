@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\core\\_typography.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_account_details.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_account_details.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_features.scss",
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_features.scss"
     },
@@ -79,6 +83,10 @@
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Profile-image.svg",
+      "PackagePath": "staticwebassets\\images\\Profile-image.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Showcase-image.svg",
