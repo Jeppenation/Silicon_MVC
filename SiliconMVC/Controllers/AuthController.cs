@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SiliconMVC.ViewModels;
+using System.Reflection;
 
 namespace SiliconMVC.Controllers;
 
@@ -44,8 +45,9 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult SignUp(SignUpViewModel viewModel)
     {
-        if(!ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
+            
             return View(viewModel);
         }
 
