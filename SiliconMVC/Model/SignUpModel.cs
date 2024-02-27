@@ -16,13 +16,13 @@ namespace SiliconMVC.Model
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address", Prompt = "Enter your email address", Order = 2)]
         [Required(ErrorMessage = "Invalid email address")]
-        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Invalid email address")]
+        //[RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Invalid email address")]
         public string EmailAddress { get; set; } = null!;
 
         [Display(Name = "Password", Prompt = "Enter your password", Order = 3)]
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Password is required")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$", ErrorMessage = "Password must be 8-15 characters and contain at least one one special character")]
+        [RegularExpression(@"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", ErrorMessage = "Password must be 8-15 characters and contain at least one one special character")]
         public string Password { get; set; } = null!;
 
         [Display(Name = "Confirm Password", Prompt = "Re-enter your password", Order = 4)]

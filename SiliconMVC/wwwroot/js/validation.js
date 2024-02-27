@@ -12,7 +12,6 @@ const compareValidator = (value, compareElement) => {
 const textValidator = (element, minLength = 2) => {
     if (element.value.length >= minLength) {
         formErrorMessage(element, true);
-        console.log(element);
     }
     else {
         formErrorMessage(element, false);
@@ -44,17 +43,17 @@ const checkBoxValidator = (element) => {
 
     if (element.checked) {
         formErrorMessage(element, true);
-        console.log(element);
     }
     else {
         formErrorMessage(element, false);
-        console.log('test');
     }
 }
 
 const emailValidator = (element) => {
-    const emailRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$/;
+
+    const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     formErrorMessage(element, emailRegEx.test(element.value));
+    console.log(element);
 }
 
 const passwordValidator = (element) => {
