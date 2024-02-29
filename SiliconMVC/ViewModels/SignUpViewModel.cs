@@ -1,4 +1,4 @@
-﻿using SiliconMVC.Model;
+﻿using Infrastructure.Models;
 
 namespace SiliconMVC.ViewModels
 {

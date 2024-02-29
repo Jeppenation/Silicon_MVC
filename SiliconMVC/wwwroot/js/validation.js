@@ -28,13 +28,13 @@ const formErrorMessage = (element, validationResult) => {
         element.classList.remove('input-validation-error');
         spanElement.classList.remove('field-validation-error');
         spanElement.classList.add('field-validation-valid');
-        spanElement.innerHTML = '';
+        spanElement.textContent = '';
     }
     else {
         element.classList.add('input-validation-error');
         spanElement.classList.add('field-validation-error');
         spanElement.classList.remove('field-validation-valid');
-        spanElement.innerHTML = element.dataset.ValRequired;
+        spanElement.innerHTML = element.dataset.valRequired;  //<- - This is where you would put the error message, which currently im not sure how to get from the data-valmsg-for attribute.
     }
 }
 
@@ -62,7 +62,7 @@ const passwordValidator = (element) => {
         formErrorMessage(element, compareValidator(element.value, document.getElementsByName(element.dataset.ValEqualtoOther.replace('*', 'Form')[0].value)));
     }
     else {
-        const passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$/;
+        const passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{5,15}$/;
         formErrorMessage(element, passwordRegEx.test(element.value));
     
     }
@@ -70,7 +70,7 @@ const passwordValidator = (element) => {
 }
 
 let forms = document.querySelectorAll('form');
-let inputs = document.querySelectorAll('input');
+let inputs = forms[0].querySelectorAll('input');
 
 inputs.forEach(input => {
     if (input.dataset.val === "true") {
