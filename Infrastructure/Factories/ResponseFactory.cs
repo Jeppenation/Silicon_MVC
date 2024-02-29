@@ -14,7 +14,7 @@ public class ResponseFactory
         return new ResponseResult
         {
             Message = "Succeeded",
-            StatusCode = StatusCodes.Created
+            StatusCode = StatusCodes.Ok
         };
     }
 
@@ -23,7 +23,7 @@ public class ResponseFactory
         return new ResponseResult
         {
             Message = message ?? "Succeeded",
-            StatusCode = StatusCodes.Created
+            StatusCode = StatusCodes.Ok
         };
     }
 
@@ -34,7 +34,7 @@ public class ResponseFactory
         {
             ContentResult = obj,
             Message = message ?? "Succeeded",
-            StatusCode = StatusCodes.Created
+            StatusCode = StatusCodes.Ok
         };
     }
 

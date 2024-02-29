@@ -8,6 +8,7 @@ public enum StatusCodes
     Unauthorized = 401,
     Forbidden = 403,
     NotFound = 404,
+    Exists = 409,
     InternalServerError = 500
 }
 

@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Services;
+using Microsoft.AspNetCore.Mvc;
 using SiliconMVC.ViewModels;
 using System.Reflection;
 
 namespace SiliconMVC.Controllers;
 
-public class AuthController : Controller
+public class AuthController(UserService userService) : Controller
 {
+    private readonly UserService _userService = userService;
+
     [Route("/signin")]
     [HttpGet]
     public IActionResult SignIn()
@@ -16,20 +19,21 @@ public class AuthController : Controller
 
     [Route("/signin")]
     [HttpPost]
-    public IActionResult SignIn(SignInViewModel viewModel)
+    public async Task <IActionResult> SignIn(SignInViewModel viewModel)
     {
 
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
-            return View(viewModel);
+            var result = await _userService.SignInUserAsync(viewModel.Form);
+            if (result.StatusCode == Infrastructure.Models.StatusCodes.Ok)
+            {
+                return RedirectToAction("Details", "Account");
+            }
         }
 
-        //var result = _authService.SignIn(viewModel.Form);
-        //if (!result)
         viewModel.ErrorMessage = "Invalid username or password.";
         return View(viewModel);
 
-        return RedirectToAction("Account", "Index");
     }
 
     [Route("/signup")]
@@ -43,15 +47,21 @@ public class AuthController : Controller
 
     [Route("/signup")]
     [HttpPost]
-    public IActionResult SignUp(SignUpViewModel viewModel)
+    public async Task<IActionResult> SignUp(SignUpViewModel viewModel)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
-            
-            return View(viewModel);
+            var result = await _userService.CreateUserAsync(viewModel.Form);
+            if (result.StatusCode == Infrastructure.Models.StatusCodes.Created)
+            {
+                return RedirectToAction("SignIn", "Auth");
+            }
         }
 
-        return RedirectToAction("SignIn", "Auth");
+
+
+
+        return View(viewModel);
     }
 
     public new IActionResult SignOut()

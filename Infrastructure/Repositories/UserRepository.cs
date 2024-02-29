@@ -10,7 +10,7 @@ namespace Infrastructure.Repositories;
 
 public class UserRepository(DataContext context) : Repo<UserEntity>(context)
 {
-    public readonly DataContext _context;
+    public readonly DataContext _context = context;
 
 
     public override async Task<ResponseResult> GetAllAsync()

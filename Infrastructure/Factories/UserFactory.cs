@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Entities;
+using Infrastructure.Helpers;
 using Infrastructure.Models;
 using System.Diagnostics;
 
@@ -11,6 +12,7 @@ public class UserFactory
         try
         {
             var date = DateTime.Now;
+            var (securityKey, password) = PasswordHasher.GeneratePasswordHash(model.Password);
 
             return new UserEntity 
             { 
@@ -18,9 +20,10 @@ public class UserFactory
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.EmailAddress,
-                Password = model.Password,
+                Password = password,
                 Created = date,
-                Modified = date
+                Modified = date,
+                SecurityKey = securityKey
 
             };
         }
