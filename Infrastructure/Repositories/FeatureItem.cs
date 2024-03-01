@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Repositories;
 
-public class FeatureItem(DataContext context) : Repo<FeatureItem>(context)
+public class FeatureItemRepository(DataContext context) : Repo<FeatureItemRepository>(context)
 {
     private readonly DataContext _context = context;
 }

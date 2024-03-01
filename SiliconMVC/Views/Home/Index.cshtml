@@ -1,5 +1,12 @@
 ﻿
+
 @model HomeIndexViewModel
+
+@inject FeatureService featureService
+
+@{
+     await featureService.GetAllFeaturesAsync();
+}
 
 <div id="showcase">
     @await Html.PartialAsync("~/Views/Shared/Sections/_ShowcasePartial.cshtml", Model.Showcase);
