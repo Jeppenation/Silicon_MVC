@@ -12,8 +12,13 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddScoped<AddressRepository>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<FeatureItemRepository>();
+builder.Services.AddScoped<FeatureRepository>();
+
+
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AddressService>();
+builder.Services.AddScoped<FeatureService>();
 
 
 var app = builder.Build();
