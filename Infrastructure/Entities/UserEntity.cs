@@ -1,17 +1,22 @@
 ﻿
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Infrastructure.Entities;
 
-public class UserEntity
+public class UserEntity : IdentityUser
 {
     [Key]
-    public string Id { get; set; } = null!;
+    //public string Id { get; set; } = null!;
+
+    [ProtectedPersonalData]
     public string FirstName { get; set; } = null!;
+
+    [ProtectedPersonalData]
     public string LastName { get; set; } = null!;
-    public string Email { get; set; } = null!;
-    public string Password { get; set; } = null!;
-    public string? Phone { get; set; }
+    //public string Email { get; set; } = null!;
+ 
+
     public string? Bio { get; set; }
     public DateTime? Created { get; set; }
     public DateTime? Modified { get; set; }

@@ -65,6 +65,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "microsoft.aspnetcore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "microsoft.aspnetcore.Identity.ui": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -140,6 +148,14 @@
             "Microsoft.entityframeworkcore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "microsoft.aspnetcore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "microsoft.aspnetcore.Identity.ui": {
               "target": "Package",
               "version": "[8.0.2, )"
             }

@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.Identity.EntityFrameworkCore" Version="8.0.2" />
+    <PackageReference Include="microsoft.aspnetcore.Identity.ui" Version="8.0.2" />
     <PackageReference Include="Microsoft.entityframeworkcore.Design" Version="8.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

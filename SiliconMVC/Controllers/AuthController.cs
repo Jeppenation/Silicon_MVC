@@ -1,4 +1,6 @@
-﻿using Infrastructure.Services;
+﻿using Infrastructure.Entities;
+using Infrastructure.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SiliconMVC.ViewModels;
 using System.Reflection;
@@ -7,6 +9,14 @@ namespace SiliconMVC.Controllers;
 
 public class AuthController(UserService userService) : Controller
 {
+
+    //private readonly UserManager<UserEntity> _userManager;
+
+    //public AuthController(UserManager<UserEntity> userManager)
+    //{
+    //    _userManager = userManager;
+    //}
+
     private readonly UserService _userService = userService;
 
     [Route("/signin")]
@@ -58,6 +68,10 @@ public class AuthController(UserService userService) : Controller
             }
         }
 
+        //if (ModelState.IsValid)
+        //{
+        //    _userManager.CreateAsync()
+        //}
 
 
 

@@ -20,7 +20,7 @@ public class UserFactory
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.EmailAddress,
-                Password = password,
+                PasswordHash = password,
                 Created = date,
                 Modified = date,
                 SecurityKey = securityKey

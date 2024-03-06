@@ -165,3 +165,12 @@ D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Infrastructure.dll
 D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Infrastructure.pdb
 D:\Projects\Silicon_MVC_git\SiliconMVC\obj\Debug\net8.0\SiliconMVC.csproj.AssemblyReference.cache
 D:\Projects\Silicon_MVC_git\SiliconMVC\obj\Debug\net8.0\SiliconMVC.csproj.Up2Date
+D:\Projects\Silicon_MVC_git\SiliconMVC\obj\Debug\net8.0\SiliconMVC.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

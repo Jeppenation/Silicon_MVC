@@ -50,7 +50,7 @@ public class UserService(UserRepository userRepository, AddressService addressSe
             {
                 var userEntity = (UserEntity)user.ContentResult;
 
-                if(PasswordHasher.ValidateSecurePassword(model.Password, userEntity.Password, userEntity.SecurityKey))
+                if(PasswordHasher.ValidateSecurePassword(model.Password, userEntity.PasswordHash!, userEntity.SecurityKey))
                     return ResponseFactory.Ok();
             }
 
