@@ -1,4 +1,5 @@
 ﻿
+@inject SignInManager<UserEntity> _signInManager
 
 
 <header>
@@ -10,6 +11,12 @@
                 <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
                 <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
                 <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="contact">Contact</a>
+
+                @if (_signInManager.IsSignedIn(User))
+                {
+                    <a class="menu-link" asp-controller="course" asp-action="Coruses">Courses</a>
+                }
+
             </nav>
         </div>
 
@@ -23,8 +30,18 @@
         </div>
 
         <div id="account-buttons" class="hide">
-            <a class="btn-gray" asp-controller="Auth" asp-action="SignIn" ><i class="fa-regular fa-right-to-bracket"></i></a>
-            <a class="btn-theme" asp-controller="Auth" asp-action="SignUp"><i class="fa-regular fa-user"></i></a>
+            @if (_signInManager.IsSignedIn(User))
+            {
+                <a class="btn-gray" asp-controller="Auth" asp-action="SignOut"><i class="fa-regular fa-right-from-bracket"></i>Sign Out</a>
+                <a class="btn-theme" asp-controller="Account" asp-action="Details"><i class="fa-regular fa-user"></i>My Account</a>
+            }
+            else
+            {
+                <a class="btn-gray" asp-controller="Auth" asp-action="SignIn"><i class="fa-regular fa-right-to-bracket"></i></a>
+                <a class="btn-theme" asp-controller="Auth" asp-action="SignUp"><i class="fa-regular fa-user"></i></a>
+            }
+
+
         </div>
 
         <button id="btn-mobilemenu">

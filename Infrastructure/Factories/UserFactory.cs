@@ -23,7 +23,7 @@ public class UserFactory
                 PasswordHash = password,
                 Created = date,
                 Modified = date,
-                SecurityKey = securityKey
+                //SecurityKey = securityKey
 
             };
         }

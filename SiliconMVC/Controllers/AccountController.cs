@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Entities;
+using Microsoft.AspNetCore.Mvc;
 using SiliconMVC.ViewModels;
 
 namespace SiliconMVC.Controllers

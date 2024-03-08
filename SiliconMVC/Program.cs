@@ -1,6 +1,7 @@
 
 
 using Infrastructure.Contexts;
+using Infrastructure.Entities;
 using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,13 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AddressService>();
 builder.Services.AddScoped<FeatureService>();
 
+builder.Services.AddDefaultIdentity<UserEntity>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+    options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequiredLength = 8;
+
+}).AddEntityFrameworkStores<DataContext>();
 
 var app = builder.Build();
 

@@ -21,7 +21,8 @@ public class UserEntity : IdentityUser
     public DateTime? Created { get; set; }
     public DateTime? Modified { get; set; }
 
-    public string SecurityKey { get; set; } = null!;
+
+
 
     public int? AddressId { get; set; }
     public AddressEntity? Address { get; set; }
