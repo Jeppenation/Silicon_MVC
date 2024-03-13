@@ -2,6 +2,7 @@
 
 using Infrastructure.Contexts;
 using Infrastructure.Entities;
+using Infrastructure.Helpers.Middlewares;
 using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,17 @@ builder.Services.AddDefaultIdentity<UserEntity>(options =>
 
 }).AddEntityFrameworkStores<DataContext>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/signin";
+    options.LogoutPath = "/signout";
+    options.AccessDeniedPath = "/accessdenied";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+    options.SlidingExpiration = true;
+});
+
 var app = builder.Build();
 
 
@@ -37,6 +49,9 @@ app.UseHsts();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+app.UseAuthentication();
+app.UseUserSessionValidator();
 
 app.UseAuthorization();
 

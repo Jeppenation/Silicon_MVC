@@ -64,6 +64,7 @@ const passwordValidator = (element) => {
     else {
         const passwordRegEx = /^(?=.*[^\w\d]).{8,15}$/;
         formErrorMessage(element, passwordRegEx.test(element.value));
+        console.log("test");
     
     }
 

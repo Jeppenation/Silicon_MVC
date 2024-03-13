@@ -15,15 +15,19 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     private readonly SignInManager<UserEntity> _signInManager = signInManager;
     private readonly UserManager<UserEntity> _userManager = userManager;
 
+
+    #region sign in
     [Route("/signin")]
     [HttpGet]
-    public IActionResult SignIn()
+    public IActionResult SignIn(string ReturnUrl)
     {
         if (_signInManager.IsSignedIn(User))
         {
             return RedirectToAction("Details", "Account");
 
         }
+
+        ViewData["ReturnUrl"] = ReturnUrl ?? Url.Content("/");
         
         var viewModel = new SignInViewModel
         {
@@ -32,17 +36,25 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         return View(viewModel);
     }
 
+
     [Route("/signin")]
     [HttpPost]
-    public async Task <IActionResult> SignIn(SignInViewModel viewModel)
+    public async Task<IActionResult> SignIn(SignInViewModel viewModel, string ReturnUrl)
     {
 
-        if(ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             var result = await _signInManager.PasswordSignInAsync(viewModel.EmailAddress, viewModel.Password, viewModel.RememberMe, false);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
+                if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                {
+                    return Redirect(ReturnUrl);
+                }
+
+
+
                 return RedirectToAction("Details", "Account");
             }
         }
@@ -52,7 +64,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
         return View(viewModel);
     }
+    #endregion
 
+    #region sign up
     [Route("/signup")]
     [HttpGet]
     public IActionResult SignUp()
@@ -84,9 +98,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
         if (ModelState.IsValid)
         {
-            
+
             var exists = await _userManager.Users.AnyAsync(x => x.Email == viewModel.EmailAddress);
-            if(exists)
+            if (exists)
             {
                 ModelState.AddModelError("EmailAddress", "Email address already exists.");
                 ViewData["ErrorMessage"] = "Email address already exists.";
@@ -107,14 +121,16 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
             {
                 return RedirectToAction("SignIn", "Auth");
             }
-            
+
         }
 
 
 
         return View(viewModel);
     }
+    #endregion
 
+    #region sign out
     [HttpGet]
     [Route("/signout")]
     public new async Task<IActionResult> SignOut()
@@ -122,4 +138,5 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
+    #endregion
 }
