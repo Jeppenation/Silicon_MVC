@@ -42,7 +42,14 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("Addresses");
                 });
@@ -170,8 +177,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AddressId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -321,6 +326,15 @@ namespace Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Infrastructure.Entities.AddressEntity", b =>
+                {
+                    b.HasOne("Infrastructure.Entities.UserEntity", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("Infrastructure.Entities.AddressEntity", "UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Infrastructure.Entities.FeatureItemEntity", b =>
                 {
                     b.HasOne("Infrastructure.Entities.FeatureEntity", "Feature")
@@ -330,15 +344,6 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Feature");
-                });
-
-            modelBuilder.Entity("Infrastructure.Entities.UserEntity", b =>
-                {
-                    b.HasOne("Infrastructure.Entities.AddressEntity", "Address")
-                        .WithMany("Users")
-                        .HasForeignKey("AddressId");
-
-                    b.Navigation("Address");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -392,14 +397,14 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Infrastructure.Entities.AddressEntity", b =>
-                {
-                    b.Navigation("Users");
-                });
-
             modelBuilder.Entity("Infrastructure.Entities.FeatureEntity", b =>
                 {
                     b.Navigation("FeatureItems");
+                });
+
+            modelBuilder.Entity("Infrastructure.Entities.UserEntity", b =>
+                {
+                    b.Navigation("Address");
                 });
 #pragma warning restore 612, 618
         }

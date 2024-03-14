@@ -12,6 +12,8 @@ public class AddressEntity
     public string PostalCode { get; set; } = null!;
     
 
+    public string? UserId { get; set; }
+    public UserEntity? User { get; set; }
 
-    public ICollection<UserEntity> Users { get; set; } = new List<UserEntity>();
+    //public ICollection<UserEntity> Users { get; set; } = new List<UserEntity>();
 }

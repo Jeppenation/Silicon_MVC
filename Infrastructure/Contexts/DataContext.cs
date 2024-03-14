@@ -9,4 +9,14 @@ public class DataContext(DbContextOptions<DataContext> options) : IdentityDbCont
     public DbSet<AddressEntity> Addresses { get; set; }
     public DbSet<FeatureEntity> Features { get; set; }
     public DbSet<FeatureItemEntity> FeatureItems { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<AddressEntity>()
+            .HasOne(a => a.User)
+            .WithOne(u => u.Address)
+            .HasForeignKey<AddressEntity>(a => a.UserId);
+    }
 }
