@@ -8,7 +8,7 @@
     <section id="account-details">
         <aside>
             <div class="profile-info">
-                <img src="@Model.BasicInfo.ProfileImage" alt="@($" Account Details for {Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}'s profile")" />
+                <img src="/images/Profile-image.svg" alt="@($" Account Details for {Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}'s profile")" />
                 <h5>@($"{Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}")</h5>
                 <p>@Model.BasicInfo.EmailAddress</p>
             </div>
@@ -22,7 +22,7 @@
             <div class="details">
                @*  basic info section *@
                 <section class="basic-info">
-                <form id="BasicInfoForm" method="post" asp-controller="Account" asp-action="SaveBasicInfo">
+                <form id="BasicInfoForm" method="post" asp-controller="Account" asp-action="Details">
                         <h2>Account Details</h2>
                         <h5>Basic Info</h5>
 
@@ -92,7 +92,7 @@
                 @* Address section *@
 
             <section class="address-info">
-                <form id="AddressInfoForm" method="post" asp-controller="Account" asp-action="AddressInfo">
+                <form id="AddressInfoForm" method="post" asp-controller="Account" asp-action="Details">
                     <h5>Address Info</h5>
 
                     <div class="content">

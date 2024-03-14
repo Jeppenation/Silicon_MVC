@@ -1,45 +1,75 @@
 ﻿using Infrastructure.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using SiliconMVC.Model;
+using SiliconMVC.Model.Views;
 using SiliconMVC.ViewModels;
 
 namespace SiliconMVC.Controllers
 {
 
     //[Authorize]
-    public class AccountController : Controller
+    public class AccountController(UserManager<UserEntity> userManager) : Controller
     {
+        private readonly UserManager<UserEntity> _userManager = userManager;
+
+        #region Details [HttpGet]
         [Route("/account")]
-        public IActionResult Details()
+        [HttpGet]
+        public async Task<IActionResult> Details()
         {
             var viewModel = new AccountDetailsViewModel();
-            //viewModel.BasicInfo = _accountService.GetBasicInfo();
-            //viewModel.AddressInfo = _accountService.GetAddressInfo();
+            viewModel.BasicInfo ??= await PopulateBasicInfoAsync();
+            viewModel.AddressInfo ??= await PopulateAddressInfoAsync();
 
             return View(viewModel);
         }
+        #endregion
 
+        #region Details [HttpPost]
+        [Route("/account")]
         [HttpPost]
-        public IActionResult SaveBasicInfo(AccountDetailsViewModel viewModel)
+        public async Task<IActionResult> Details(AccountDetailsViewModel viewModel)
         {
-            if (TryValidateModel(viewModel.BasicInfo))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
-
+                if (viewModel.BasicInfo != null) { }
+                if (viewModel.AddressInfo != null) { }
             }
-            return View("Details", viewModel);
+
+            viewModel.BasicInfo ??= await PopulateBasicInfoAsync();
+            viewModel.AddressInfo ??= await PopulateAddressInfoAsync();
+
+            return View(viewModel);
+        }
+        #endregion
+
+
+
+
+
+
+        private async Task<AccountDetailsBasicInfoModel> PopulateBasicInfoAsync()
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            return new AccountDetailsBasicInfoModel
+            {
+                userId = user!.UserId,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                EmailAddress = user.Email!,
+                Phone = user.PhoneNumber,
+                Bio = user.Bio
+            };
         }
 
-        [HttpPost]
-        public IActionResult AddressInfo(AccountDetailsViewModel viewModel)
+        private async Task<AccountDetailsAddressInfoModel> PopulateAddressInfoAsync()
         {
-            if (TryValidateModel(viewModel.AddressInfo))
-            {
-                return RedirectToAction("Index", "Home");
 
-            }
-            return View("Details", viewModel);
+            return new AccountDetailsAddressInfoModel();
+
         }
-
     }
 }

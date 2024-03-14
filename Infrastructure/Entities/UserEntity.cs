@@ -7,7 +7,7 @@ namespace Infrastructure.Entities;
 public class UserEntity : IdentityUser
 {
     [Key]
-    //public string Id { get; set; } = null!;
+    public string UserId { get; set; } = null!;
 
     [ProtectedPersonalData]
     public string FirstName { get; set; } = null!;
