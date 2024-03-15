@@ -1,16 +1,29 @@
 ﻿@model AccountDetailsViewModel
 
 @{
-    ViewData["Title"] = $"Account Details for {Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}'s profile";
+
+    ViewData["Title"] = $"Account Details for {Model.ProfileInfo.FirstName} {Model.ProfileInfo.LastName}'s profile";
 }
+
+@* <p>Model.ProfileInfo: @Model.ProfileInfo</p>
+<p>Model.ProfileInfo.FirstName: @Model.ProfileInfo?.FirstName</p>
+<p>Model.ProfileInfo.LastName: @Model.ProfileInfo?.LastName</p> *@
 
 <div class="container">
     <section id="account-details">
+
+        @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
+        {
+            <div class="alert">
+                @ViewData["ErrorMessage"]
+            </div>
+        }
+
         <aside>
             <div class="profile-info">
-                <img src="/images/Profile-image.svg" alt="@($" Account Details for {Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}'s profile")" />
-                <h5>@($"{Model.BasicInfo.FirstName} {Model.BasicInfo.LastName}")</h5>
-                <p>@Model.BasicInfo.EmailAddress</p>
+                <img src="/images/@Model.ProfileInfo.ProfileImage" alt="@($" Account Details for {Model.ProfileInfo.FirstName} {Model.ProfileInfo.LastName}'s profile")" />
+                <h5>@($"{Model.ProfileInfo.FirstName} {Model.ProfileInfo.LastName}")</h5>
+                <p>@Model.ProfileInfo.Email</p>
             </div>
 
             <nav>
@@ -58,19 +71,13 @@
                             </div>
 
 
- 
-                            <div id="form-bio" class="input-group">
-                                <label asp-for=BasicInfo.Bio></label>
-                                <span asp-validation-for="BasicInfo.Bio"></span>
-                                <input asp-for="BasicInfo.Bio" />
-                            </div>
 
+                             <div id="form-bio" class="input-group">
+                                 <label asp-for=BasicInfo.Bio>Bio <span>(optional)</span> </label>
+                                 <span asp-validation-for="BasicInfo.Bio"></span>
+                                 <textarea asp-for="BasicInfo.Bio" placeholder="Add a short bio.."></textarea>
+                             </div>
 
-
-                            <div id="form-bio" class="input-group">
-                            <label>Bio <span>(optional)</span> </label>
-                                <textarea name="bio" placeholder="Add a short bio.."></textarea>
-                            </div>
 
                             <div class="form-buttons">
                                 <button class="btn-gray" type="reset">Cancel</button>
