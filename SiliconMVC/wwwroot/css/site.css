@@ -491,6 +491,13 @@ form span.field-validation-error {
   font-size: 14px !important;
 }
 
+.review_stars {
+  font-size: 0.8rem;
+  color: #FFBA08;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 header {
   padding: 15px 0;
 }
@@ -1151,4 +1158,88 @@ footer .container .social-media a i {
 }
 .content-section .container .content-side .btn-theme-s i {
   margin-left: 10px;
+}
+
+#app_section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #F3F6FF;
+}
+#app_section p {
+  color: #9397AD;
+  margin: 0px;
+}
+#app_section .container {
+  display: block;
+}
+@media (min-width: 992px) {
+  #app_section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#app_section .container h4 {
+  color: #0B0F19;
+}
+#app_section .container .img_side {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  #app_section .container .img_side {
+    margin-bottom: 0;
+  }
+}
+#app_section .container .img_side img {
+  max-width: 50%;
+}
+@media (min-width: 992px) {
+  #app_section .container .img_side img {
+    max-width: 100%;
+  }
+}
+#app_section .container .app_side .apple_store {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 992px) {
+  #app_section .container .app_side .apple_store {
+    margin-bottom: 3rem;
+  }
+}
+#app_section .container .app_side .apple_store .apple_store_right {
+  display: flex;
+}
+#app_section .container .app_side .apple_store .apple_store_right img {
+  margin-top: 3rem;
+  max-width: 70%;
+  margin-left: 0rem;
+}
+@media (min-width: 992px) {
+  #app_section .container .app_side .apple_store .apple_store_right img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+#app_section .container .app_side .google_play {
+  display: flex;
+  justify-content: space-around;
+}
+#app_section .container .app_side .google_play .google_store_right {
+  display: flex;
+}
+#app_section .container .app_side .google_play .google_store_right img {
+  margin-top: 3rem;
+  max-width: 70%;
+  margin-left: 1rem;
+}
+@media (min-width: 992px) {
+  #app_section .container .app_side .google_play .google_store_right img {
+    max-width: 100%;
+    margin-left: 0;
+  }
 }
