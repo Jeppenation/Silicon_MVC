@@ -18,5 +18,11 @@ public class DataContext(DbContextOptions<DataContext> options) : IdentityDbCont
             .HasOne(a => a.User)
             .WithOne(u => u.Address)
             .HasForeignKey<AddressEntity>(a => a.UserId);
+
+        builder.Entity<UserEntity>()
+            .HasOne(u => u.Address)
+            .WithOne(a => a.User)
+            .HasForeignKey<AddressEntity>(a => a.UserId)
+            .OnDelete(DeleteBehavior.Cascade); 
     }
 }

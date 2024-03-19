@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\core\\_typography.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_LightDarkShowcase.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_LightDarkShowcase.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_account_details.scss",
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_account_details.scss"
     },
@@ -85,8 +89,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\ContentImage.svg",
+      "PackagePath": "staticwebassets\\images\\ContentImage.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\MacBook_Pro-dark.svg",
+      "PackagePath": "staticwebassets\\images\\MacBook_Pro-dark.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\MacBook_Pro-light.svg",
+      "PackagePath": "staticwebassets\\images\\MacBook_Pro-light.svg"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Profile-image.svg",
       "PackagePath": "staticwebassets\\images\\Profile-image.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Screen.svg",
+      "PackagePath": "staticwebassets\\images\\Screen.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Showcase-image.svg",
@@ -139,6 +159,10 @@
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\logo4.svg",
       "PackagePath": "staticwebassets\\images\\logo4.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\macbook-pro-dark.svg",
+      "PackagePath": "staticwebassets\\images\\macbook-pro-dark.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\js\\site.js",

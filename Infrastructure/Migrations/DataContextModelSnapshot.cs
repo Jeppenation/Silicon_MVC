@@ -137,6 +137,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsExternalAccount")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -334,7 +337,8 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Infrastructure.Entities.UserEntity", "User")
                         .WithOne("Address")
-                        .HasForeignKey("Infrastructure.Entities.AddressEntity", "UserId");
+                        .HasForeignKey("Infrastructure.Entities.AddressEntity", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("User");
                 });

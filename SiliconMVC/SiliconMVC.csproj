@@ -15,6 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Aspnetcore.Authentication.Google" Version="8.0.3" />
     <PackageReference Include="microsoft.aspnetcore.Identity.EntityFrameworkCore" Version="8.0.2" />
     <PackageReference Include="microsoft.aspnetcore.Identity.ui" Version="8.0.2" />
     <PackageReference Include="Microsoft.entityframeworkcore.Design" Version="8.0.2">

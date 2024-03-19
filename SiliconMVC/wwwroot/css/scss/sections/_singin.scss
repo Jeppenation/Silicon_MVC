@@ -34,6 +34,31 @@
                     margin: 1rem 0 0 0;
                 }
 
+                .external-providers {
+                   text-align: center;
+                    
+
+                    .providers {
+
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem;
+                        
+      
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        a{
+                            margin: 0;
+                            padding: 1rem 2rem;
+                            
+                        }
+
+                    }
+                }
+
 
             }
         }

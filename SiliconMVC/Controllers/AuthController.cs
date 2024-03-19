@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SiliconMVC.ViewModels;
 using System.Reflection;
+using System.Security.Claims;
 
 namespace SiliconMVC.Controllers;
 
@@ -16,7 +17,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     private readonly UserManager<UserEntity> _userManager = userManager;
 
 
-    #region sign in
+    #region Individual Account - sign in
     [Route("/signin")]
     [HttpGet]
     public IActionResult SignIn(string ReturnUrl)
@@ -28,7 +29,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         }
 
         ViewData["ReturnUrl"] = ReturnUrl ?? Url.Content("/");
-        
+
         var viewModel = new SignInViewModel
         {
             Title = "Sign In"
@@ -66,7 +67,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     }
     #endregion
 
-    #region sign up
+    #region Individual Account - sign up
     [Route("/signup")]
     [HttpGet]
     public IActionResult SignUp()
@@ -130,7 +131,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     }
     #endregion
 
-    #region sign out
+    #region Individual Account - sign out
     [HttpGet]
     [Route("/signout")]
     public new async Task<IActionResult> SignOut()
@@ -138,5 +139,131 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
+    #endregion
+
+    #region External Account - Facebook
+    [HttpGet]
+    public IActionResult Facebook()
+    {
+        var authProps = _signInManager.ConfigureExternalAuthenticationProperties("Facebook", Url.Action("FacebookCallback"));
+        return new ChallengeResult("Facebook", authProps);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> FacebookCallback()
+    {
+        var info = await _signInManager.GetExternalLoginInfoAsync();
+       
+
+        if (info != null)
+        {
+            var userEntity = new UserEntity
+            {
+                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName)!,
+                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname)!,
+                Email = info.Principal.FindFirstValue(ClaimTypes.Email)!,
+                UserName = info.Principal.FindFirstValue(ClaimTypes.Email)!,
+                IsExternalAccount = true
+            };
+
+            var user = await _userManager.FindByEmailAsync(userEntity.Email);
+
+            if (user == null)
+            {
+                var result = await _userManager.CreateAsync(userEntity);
+                if (result.Succeeded)
+                {
+                    user = await _userManager.FindByEmailAsync(userEntity.Email);
+                }
+            }
+
+            if (user != null)
+            {
+                if (user.FirstName != userEntity.FirstName || user.LastName != userEntity.LastName || user.Email != userEntity.Email)
+                {
+                    user.FirstName = userEntity.FirstName;
+                    user.LastName = userEntity.LastName;
+                    user.Email = userEntity.Email;
+
+                    await _userManager.UpdateAsync(user);
+                }
+
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+                if (HttpContext.User != null)
+                {
+                    return RedirectToAction("Details", "Account");
+                }
+            }
+        }
+        ModelState.AddModelError("ErrorMessage", "Failed to sign in with Facebook.");
+        ViewData["ErrorMessage"] = "Failed to sign in with Facebook.";
+        return RedirectToAction("SignIn", "Auth");
+    }
+
+
+    #endregion
+
+    #region External Account - Google
+
+    [HttpGet]
+    public IActionResult Google()
+    {
+        var authProps = _signInManager.ConfigureExternalAuthenticationProperties("Google", Url.Action("GoogleCallback"));
+        return new ChallengeResult("Google", authProps);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GoogleCallback()
+    {
+        var info = await _signInManager.GetExternalLoginInfoAsync();
+
+
+        if (info != null)
+        {
+            var userEntity = new UserEntity
+            {
+                FirstName = info.Principal.FindFirstValue(ClaimTypes.GivenName)!,
+                LastName = info.Principal.FindFirstValue(ClaimTypes.Surname)!,
+                Email = info.Principal.FindFirstValue(ClaimTypes.Email)!,
+                UserName = info.Principal.FindFirstValue(ClaimTypes.Email)!,
+                IsExternalAccount = true
+            };
+
+            var user = await _userManager.FindByEmailAsync(userEntity.Email);
+
+            if (user == null)
+            {
+                var result = await _userManager.CreateAsync(userEntity);
+                if (result.Succeeded)
+                {
+                    user = await _userManager.FindByEmailAsync(userEntity.Email);
+                }
+            }
+
+            if (user != null)
+            {
+                if (user.FirstName != userEntity.FirstName || user.LastName != userEntity.LastName || user.Email != userEntity.Email)
+                {
+                    user.FirstName = userEntity.FirstName;
+                    user.LastName = userEntity.LastName;
+                    user.Email = userEntity.Email;
+
+                    await _userManager.UpdateAsync(user);
+                }
+
+                await _signInManager.SignInAsync(user, isPersistent: false);
+
+                if (HttpContext.User != null)
+                {
+                    return RedirectToAction("Details", "Account");
+                }
+            }
+        }
+        ModelState.AddModelError("ErrorMessage", "Failed to sign in with Facebook.");
+        ViewData["ErrorMessage"] = "Failed to sign in with Facebook.";
+        return RedirectToAction("SignIn", "Auth");
+    }
+
     #endregion
 }

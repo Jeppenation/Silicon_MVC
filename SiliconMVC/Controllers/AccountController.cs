@@ -144,7 +144,8 @@ namespace SiliconMVC.Controllers
                 LastName = user.LastName,
                 EmailAddress = user.Email!,
                 Phone = user.PhoneNumber,
-                Bio = user.Bio
+                Bio = user.Bio,
+
             };
         }
 
@@ -158,6 +159,7 @@ namespace SiliconMVC.Controllers
                 FirstName = user!.FirstName,
                 LastName = user.LastName,
                 Email = user.Email!,
+                IsExternalAccount = user.IsExternalAccount,
 
             };
         }

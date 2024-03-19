@@ -174,3 +174,5 @@ D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Fil
 D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+D:\Projects\Silicon_MVC_git\SiliconMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll

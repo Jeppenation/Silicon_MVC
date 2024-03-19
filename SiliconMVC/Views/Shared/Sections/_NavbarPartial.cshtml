@@ -2,6 +2,7 @@
 @inject SignInManager<UserEntity> _signInManager
 
 
+
 <header>
     <div class="container">
         <a id="logo" asp-controller="Home" asp-action="Index"><img src="/images/Silicon Logotype - Light Mode.svg" alt="Silicon"></a>
@@ -32,8 +33,11 @@
         <div id="account-buttons" class="hide">
             @if (_signInManager.IsSignedIn(User))
             {
-                <a class="btn-gray" asp-controller="Auth" asp-action="SignOut"><i class="fa-regular fa-right-from-bracket"></i>Sign Out</a>
-                <a class="btn-theme" asp-controller="Account" asp-action="Details"><i class="fa-regular fa-user"></i>My Account</a>
+@*                 <a class="btn-gray" asp-controller="Auth" asp-action="SignOut"><i class="fa-regular fa-right-from-bracket"></i>Sign Out</a>
+                <a class="btn-theme" asp-controller="Account" asp-action="Details"><i class="fa-regular fa-user"></i>My Account</a> *@
+                <a  asp-controller="Account" asp-action="Details">
+                <img class="navbar-profile" src="/images/Profile-image.svg" />
+                </a>
             }
             else
             {
