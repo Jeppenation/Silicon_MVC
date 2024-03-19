@@ -272,5 +272,8 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 
+# Secretes
+ThirdPartySecretes.cs
+
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
 /SiliconMVC/.vs/SiliconMVC/v17/.suo

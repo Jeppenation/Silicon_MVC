@@ -4,6 +4,7 @@ using Infrastructure.Contexts;
 using Infrastructure.Entities;
 using Infrastructure.Helpers.Middlewares;
 using Infrastructure.Repositories;
+using Infrastructure.Secretes;
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -51,18 +52,20 @@ builder.Services.ConfigureApplicationCookie(options =>
 //    x.Fields.Add("last_name");
 //});
 
+var secretes = new ThirdPartySecretes();
+
 builder.Services.AddAuthentication()
     .AddFacebook(x =>
 {
-    x.AppId = "1199558597850441";
-    x.AppSecret = "6f9d5152da480538f78747ecad646629";
+    x.AppId = secretes.FacebookAppId;
+    x.AppSecret = secretes.FacebookAppSecret;
     x.Fields.Add("first_name");
     x.Fields.Add("last_name");
 })
     .AddGoogle(x =>
     {
-        x.ClientId = "507867327510-tn03bun56tb9hqcpvhgevtm716mgdkpb.apps.googleusercontent.com";
-        x.ClientSecret = "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";
+        x.ClientId = secretes.GoogleClientId;
+        x.ClientSecret = secretes.GoogleClientSecret;
     });
 
 var app = builder.Build();

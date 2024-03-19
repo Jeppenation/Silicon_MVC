@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_account_details.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_contentSection.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_contentSection.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_features.scss",
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_features.scss"
     },
@@ -101,6 +105,10 @@
       "PackagePath": "staticwebassets\\images\\MacBook_Pro-light.svg"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Phones_img.svg",
+      "PackagePath": "staticwebassets\\images\\Phones_img.svg"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Profile-image.svg",
       "PackagePath": "staticwebassets\\images\\Profile-image.svg"
     },
@@ -119,6 +127,10 @@
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Silicon Logotype - Light Mode.svg",
       "PackagePath": "staticwebassets\\images\\Silicon Logotype - Light Mode.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\appstore.svg",
+      "PackagePath": "staticwebassets\\images\\appstore.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\features_icon_1.svg",
@@ -143,6 +155,10 @@
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\features_icon_6.svg",
       "PackagePath": "staticwebassets\\images\\features_icon_6.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\googleplay.svg",
+      "PackagePath": "staticwebassets\\images\\googleplay.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\logo1.svg",

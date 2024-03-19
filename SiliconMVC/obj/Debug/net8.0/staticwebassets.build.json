@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s9Tw/N5dSQMElhTves1e5CbqLq7LK+rENaHZL0unIQM=",
+  "Hash": "QhLQRtj19javSt9YZMTFWliwZlz4MxgHF3tO4Mil6wE=",
   "Source": "SiliconMVC",
   "BasePath": "_content/SiliconMVC",
   "Mode": "Default",
@@ -1366,6 +1366,25 @@
       "OriginalItemSpec": "wwwroot\\css\\scss\\sections\\_account_details.scss"
     },
     {
+      "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_contentSection.scss",
+      "SourceId": "SiliconMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\",
+      "BasePath": "_content/SiliconMVC",
+      "RelativePath": "css/scss/sections/_contentSection.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\scss\\sections\\_contentSection.scss"
+    },
+    {
       "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_features.scss",
       "SourceId": "SiliconMVC",
       "SourceType": "Discovered",
@@ -1575,6 +1594,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\appstore.svg",
+      "SourceId": "SiliconMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\",
+      "BasePath": "_content/SiliconMVC",
+      "RelativePath": "images/appstore.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\appstore.svg"
+    },
+    {
       "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\ContentImage.svg",
       "SourceId": "SiliconMVC",
       "SourceType": "Discovered",
@@ -1708,6 +1746,25 @@
       "OriginalItemSpec": "wwwroot\\images\\features_icon_6.svg"
     },
     {
+      "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\googleplay.svg",
+      "SourceId": "SiliconMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\",
+      "BasePath": "_content/SiliconMVC",
+      "RelativePath": "images/googleplay.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\googleplay.svg"
+    },
+    {
       "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\logo1.svg",
       "SourceId": "SiliconMVC",
       "SourceType": "Discovered",
@@ -1839,6 +1896,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\macbook-pro-dark.svg"
+    },
+    {
+      "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Phones_img.svg",
+      "SourceId": "SiliconMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\",
+      "BasePath": "_content/SiliconMVC",
+      "RelativePath": "images/Phones_img.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Phones_img.svg"
     },
     {
       "Identity": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Profile-image.svg",
