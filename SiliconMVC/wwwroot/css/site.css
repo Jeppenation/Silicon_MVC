@@ -1250,6 +1250,7 @@ footer .container .social-media a i {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 5rem;
 }
 .worktools .container .title_part h1 {
   line-height: 160%;
@@ -1268,10 +1269,43 @@ footer .container .social-media a i {
   font-family: "Manrope", sans-serif;
   font-size: 18px !important;
   font-weight: 300;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  /*                margin-left:10rem;
+                  margin-right:10rem;*/
+  margin-bottom: 5rem;
+}
+@media (min-width: 992px) {
+  .worktools .container .title_part p {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 }
 .worktools .container .worktools_part {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 992px) {
+  .worktools .container .worktools_part {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .worktools .container .worktools_part {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.worktools .container .worktools_part .box {
+  /*width: 100%;*/
+  /*border: 1px solid black;*/
+}
+.worktools .container .worktools_part .box img {
+  /*border: 1px solid black;*/
+  margin-bottom: 1rem;
+}
+.worktools .container .worktools_part .box p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
 }
