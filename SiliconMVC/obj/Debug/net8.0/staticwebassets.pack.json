@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\components\\_links.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\components\\_miscellaneous.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\components\\_miscellaneous.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\core\\_base.scss",
       "PackagePath": "staticwebassets\\css\\scss\\core\\_base.scss"
     },
@@ -81,6 +85,10 @@
       "PackagePath": "staticwebassets\\css\\scss\\sections\\_singin.scss"
     },
     {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\scss\\sections\\_worktools.scss",
+      "PackagePath": "staticwebassets\\css\\scss\\sections\\_worktools.scss"
+    },
+    {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -99,6 +107,46 @@
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\ContentImage.svg",
       "PackagePath": "staticwebassets\\images\\ContentImage.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\CameraColor.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\CameraColor.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Dropbox.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Dropbox.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Evernote.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Evernote.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Google.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Google.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\GoogleColor.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\GoogleColor.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\MailChimp.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\MailChimp.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Slack.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Slack.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Trello.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Trello.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\Zoom.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\Zoom.svg"
+    },
+    {
+      "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\Logos\\gmail.svg",
+      "PackagePath": "staticwebassets\\images\\Logos\\gmail.svg"
     },
     {
       "Id": "D:\\Projects\\Silicon_MVC_git\\SiliconMVC\\wwwroot\\images\\MacBook_Pro-dark.svg",

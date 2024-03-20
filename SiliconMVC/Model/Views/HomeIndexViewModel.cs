@@ -1,4 +1,5 @@
 ﻿using SiliconMVC.Model.Sections;
+using SiliconMVC.ViewModels;
 
 namespace SiliconMVC.Model.Views
 {
@@ -22,6 +23,21 @@ namespace SiliconMVC.Model.Views
                     ],
 
 
+        };
+
+        public WorkToolsViewModel WorkTools { get; set; } = new()
+        {
+            WorkToolsItems =
+                [
+                    new() { ImageUrl = "images/Logos/Google.svg", Text = "Lorem magnis pretium sed curabitur nunc facilisi nunc cursus sagittis." },
+                    new() { ImageUrl = "images/Logos/Zoom.svg", Text = "In eget a mauris quis. Tortor dui tempus quis integer est sit natoque placerat dolor." },
+                    new() { ImageUrl = "images/Logos/Slack.svg", Text = "Id mollis consectetur congue egestas egestas suspendisse blandit justo." },
+                    new() { ImageUrl = "images/Logos/gmail.svg", Text = "Rutrum interdum tortor, sed at nulla. A cursus bibendum elit purus cras praesent." },
+                    new() { ImageUrl = "images/Logos/Trello.svg", Text = "Congue pellentesque amet, viverra curabitur quam diam scelerisque fermentum urna." },
+                    new() { ImageUrl = "images/Logos/MailChimp.svg", Text = "A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris." },
+                    new() { ImageUrl = "images/Logos/Dropbox.svg", Text = "Ut in turpis consequat odio diam lectus elementum. Est faucibus blandit platea." },
+                    new() { ImageUrl = "images/Logos/Evernote.svg", Text = "Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu." }
+                ]
         };
 
            

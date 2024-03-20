@@ -1243,3 +1243,35 @@ footer .container .social-media a i {
     margin-left: 0;
   }
 }
+
+.worktools .container .title_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.worktools .container .title_part h1 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+}
+.worktools .container .title_part p {
+  color: #9397AD;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px !important;
+  font-weight: 300;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.worktools .container .worktools_part {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

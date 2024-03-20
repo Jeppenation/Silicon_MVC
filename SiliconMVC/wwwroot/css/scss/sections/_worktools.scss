@@ -1,0 +1,29 @@
+.worktools {
+
+    .container {
+
+        .title_part {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1{
+                @include h1;
+            }
+            p{
+                color: $gray-600;
+                @include text-lg;
+                font-weight: 300;
+                margin-left:10rem;
+                margin-right:10rem;
+            }
+        }
+
+        .worktools_part {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
